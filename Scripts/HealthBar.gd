@@ -1,8 +1,8 @@
 extends Node2D
 
-onready var player = get_parent().get_node("Player")
+onready var player_stats = get_node("/root/PlayerStats")
 var MAX_WIDTH = 20.0
 
 func _process(delta):
-	var health_ratio = float(player.health) / float(player.MAX_HEALTH)
+	var health_ratio = float(player_stats.health) / float(player_stats.MAX_HEALTH)
 	get_node("ColorRect").rect_size.x = health_ratio * MAX_WIDTH

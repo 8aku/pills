@@ -20,10 +20,12 @@ var jump_timer = 0
 var fall_timer = 0
 var canInteract
 var target
-var MAX_HEALTH = 10
-var health = MAX_HEALTH
+var dead = false
+
+onready var player_stats = get_node("/root/PlayerStats")
 
 func _ready():
+	$AnimatedSprite.play("default")
 	last_direction = RIGHT
 
 
@@ -46,22 +48,31 @@ func _process_input(delta):
 		last_direction = RIGHT
 	if Input.is_action_just_released("ui_right") and Input.is_action_pressed("ui_left"):
 		last_direction = LEFT
+	
+	if !dead:
+		if last_direction == LEFT and Input.is_action_pressed("ui_left"):
+			velocity.x -= run_accel
+			$AnimatedSprite.play("walk")
+		elif last_direction == RIGHT and Input.is_action_pressed("ui_right"):
+			velocity.x += run_accel
+			$AnimatedSprite.play("walk")
+		else:
+			$AnimatedSprite.play("default")
 		
-	if last_direction == LEFT and Input.is_action_pressed("ui_left"):
-		velocity.x -= run_accel
-	elif last_direction == RIGHT and Input.is_action_pressed("ui_right"):
-		velocity.x += run_accel
-		
-	if Input.is_action_just_pressed("jump") and jump_timer > 0:
-		velocity.y = min(0, velocity.y)
-		velocity.y -= jump_accel
-		jump_timer = 0
+		if Input.is_action_just_pressed("jump") and jump_timer > 0:
+			velocity.y = min(0, velocity.y)
+			velocity.y -= jump_accel
+			jump_timer = 0
+	
+	if dead:
+		$AnimatedSprite.play('dead')
 	
 	
 func _process_environment(delta):
 	var gravity_factor = 1.0
 	
-	if Input.is_action_pressed("jump"):
+	if !dead and Input.is_action_pressed("jump"):
+		$AnimatedSprite.play("jump")
 		gravity_factor = 0.7
 			
 	velocity.y += GRAVITY * delta * gravity_factor
@@ -110,6 +121,10 @@ func _process(delta):
 	_process_movement(delta)
 	_set_animation()
 	
+func die():
+	print('player is dead!')
+	print(player_stats.health)
+	dead = true
 	
 #func hit(damage):
 #	$AnimatedSprite.play("hit")
