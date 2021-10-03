@@ -46,6 +46,22 @@ scale = Vector2( 1, 1 )
 position = Vector2( 44.2168, 144.377 )
 scale = Vector2( 1, 1 )
 
+[node name="Pill6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 67.9762, 144.377 )
+scale = Vector2( 1, 1 )
+
+[node name="Pill7" parent="." instance=ExtResource( 4 )]
+position = Vector2( 156.865, 89.3108 )
+scale = Vector2( 1, 1 )
+
+[node name="Pill8" parent="." instance=ExtResource( 4 )]
+position = Vector2( 168.045, 141.302 )
+scale = Vector2( 1, 1 )
+
+[node name="Pill9" parent="." instance=ExtResource( 4 )]
+position = Vector2( 15.7054, 167.298 )
+scale = Vector2( 1, 1 )
+
 [node name="Pill4" parent="." instance=ExtResource( 4 )]
 position = Vector2( 115.681, 136.131 )
 scale = Vector2( 1, 1 )
@@ -77,12 +93,13 @@ position = Vector2( 270.122, 130.185 )
 shape = SubResource( 1 )
 
 [node name="TextureRect" type="TextureRect" parent="StaticBody2D/CollisionShape2D2"]
-margin_left = -183.0
-margin_top = -116.0
-margin_right = -91.0
-margin_bottom = -74.0
+margin_left = -173.869
+margin_top = -125.0
+margin_right = -65.8688
+margin_bottom = -71.0
 texture = ExtResource( 7 )
 expand = true
+stretch_mode = 5
 __meta__ = {
 "_edit_use_anchors_": false
 }

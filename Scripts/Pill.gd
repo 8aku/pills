@@ -4,7 +4,7 @@ onready var micro_shader = get_node("/root/PillShader")
 onready var shader_script = preload("res://Scripts/PillShader.shader")
 onready var player = get_parent().get_node("Player")
 onready var player_stats = get_node("/root/PlayerStats")
-var _time_length = 6
+var _time_length = 7
 var _fade_in_time = 1
 var _fade_out_time = 2
 

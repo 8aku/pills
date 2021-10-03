@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Pill.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://HealthBar.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Images/Tiles/tilemap1.png" type="Texture" id=5]
 [ext_resource path="res://Images/background1.png" type="Texture" id=6]
+[ext_resource path="res://Door.tscn" type="PackedScene" id=7]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
@@ -275,7 +276,7 @@ position = Vector2( 0, 16 )
 tile_set = SubResource( 9 )
 cell_size = Vector2( 8, 8 )
 format = 1
-tile_data = PoolIntArray( 1048580, 6, 0, 1048581, 8, 0, 1048582, 8, 0, 1048583, 8, 0, 1048584, 6, 0, 1114117, 536870921, 0, 1114118, 536870922, 0, 1114119, 9, 0, 1114131, 5, 0, 1114132, 8, 0, 1114133, 8, 0, 1114134, 8, 0, 1114135, 536870920, 0, 1114136, 8, 0, 1114137, 8, 0, 1114138, 5, 0, 1179668, 536870921, 0, 1179669, 536870922, 0, 1179670, 536870922, 0, 1179671, 536870922, 0, 1179672, 536870922, 0, 1179673, 9, 0, 1245195, 6, 0, 1245196, 536870920, 0, 1245197, 536870920, 0, 1245198, 536870920, 0, 1245199, 536870920, 0, 1245200, 536870920, 0, 1245201, 536870920, 0, 1245202, 5, 0, 1310732, 536870921, 0, 1310733, 10, 0, 1310734, 10, 0, 1310735, 10, 0, 1310736, 10, 0, 1310737, 9, 0, 1376258, 5, 0, 1376259, 8, 0, 1376260, 8, 0, 1376261, 8, 0, 1376262, 8, 0, 1376263, 6, 0, 1441795, 536870921, 0, 1441796, 10, 0, 1441797, 10, 0, 1441798, 9, 0, 1572871, 5, 0, 1572872, 8, 0, 1572873, 8, 0, 1572874, 8, 0, 1572875, 8, 0, 1572876, 5, 0, 1638408, 536870921, 0, 1638409, 10, 0, 1638410, 10, 0, 1638411, 9, 0, 1835008, 3, 0, 1835009, 3, 0, 1835010, 3, 0, 1835011, 3, 0, 1835012, 3, 0, 1835013, 3, 0, 1835014, 3, 0, 1835015, 3, 0, 1835016, 3, 0, 1835017, 3, 0, 1835018, 3, 0, 1835019, 3, 0, 1835020, 3, 0, 1835021, 3, 0, 1835022, 3, 0, 1835023, 3, 0, 1835024, 3, 0, 1835025, 3, 0, 1835026, 3, 0, 1835027, 3, 0, 1835028, 3, 0, 1835029, 3, 0, 1835030, 3, 0, 1835031, 3, 0, 1835032, 3, 0, 1835033, 3, 0, 1835034, 3, 0, 1835035, 3, 0, 1835036, 3, 0, 1835037, 3, 0, 1835038, 3, 0, 1835039, 3, 0, 1900544, 1, 0, 1900545, 1, 0, 1900546, 1, 0, 1900547, 1, 0, 1900548, 1, 0, 1900549, 1, 0, 1900550, 1, 0, 1900551, 1, 0, 1900552, 1, 0, 1900553, 1, 0, 1900554, 1, 0, 1900555, 1, 0, 1900556, 1, 0, 1900557, 1, 0, 1900558, 1, 0, 1900559, 1, 0, 1900560, 1, 0, 1900561, 1, 0, 1900562, 1, 0, 1900563, 1, 0, 1900564, 1, 0, 1900565, 1, 0, 1900566, 1, 0, 1900567, 1, 0, 1900568, 1, 0, 1900569, 1, 0, 1900570, 1, 0, 1900571, 1, 0, 1900572, 1, 0, 1900573, 1, 0, 1900574, 1, 0, 1900575, 1, 0 )
+tile_data = PoolIntArray( 1048580, 6, 0, 1048581, 8, 0, 1048582, 8, 0, 1048583, 8, 0, 1048584, 6, 0, 1048586, 6, 0, 1048587, 8, 0, 1048588, 8, 0, 1048589, 8, 0, 1048590, 536870920, 0, 1048591, 536870917, 0, 1114117, 536870921, 0, 1114118, 536870922, 0, 1114119, 9, 0, 1114123, 536870921, 0, 1114124, 536870922, 0, 1114125, 536870922, 0, 1114126, 9, 0, 1114131, 5, 0, 1114132, 8, 0, 1114133, 8, 0, 1114134, 8, 0, 1114135, 536870920, 0, 1114136, 8, 0, 1114137, 8, 0, 1114138, 5, 0, 1179668, 536870921, 0, 1179669, 536870922, 0, 1179670, 536870922, 0, 1179671, 536870922, 0, 1179672, 536870922, 0, 1179673, 9, 0, 1245195, 6, 0, 1245196, 536870920, 0, 1245197, 536870920, 0, 1245198, 536870920, 0, 1245199, 536870920, 0, 1245200, 536870920, 0, 1245201, 536870920, 0, 1245202, 5, 0, 1310732, 536870921, 0, 1310733, 10, 0, 1310734, 10, 0, 1310735, 10, 0, 1310736, 10, 0, 1310737, 9, 0, 1376258, 5, 0, 1376259, 8, 0, 1376260, 8, 0, 1376261, 8, 0, 1376262, 8, 0, 1376263, 6, 0, 1441795, 536870921, 0, 1441796, 10, 0, 1441797, 10, 0, 1441798, 9, 0, 1507340, 536870917, 0, 1507341, 536870920, 0, 1507342, 536870920, 0, 1507343, 536870920, 0, 1507344, 536870920, 0, 1507345, 536870918, 0, 1572877, 536870921, 0, 1572878, 10, 0, 1572879, 10, 0, 1572880, 9, 0, 1638404, 6, 0, 1638405, 8, 0, 1638406, 536870920, 0, 1638407, 536870920, 0, 1638408, 536870920, 0, 1638409, 8, 0, 1638410, 536870917, 0, 1703941, 536870921, 0, 1703942, 10, 0, 1703943, 10, 0, 1703944, 10, 0, 1703945, 9, 0, 1835008, 3, 0, 1835009, 3, 0, 1835010, 3, 0, 1835011, 3, 0, 1835012, 3, 0, 1835013, 3, 0, 1835014, 3, 0, 1835015, 3, 0, 1835016, 3, 0, 1835017, 3, 0, 1835018, 3, 0, 1835019, 3, 0, 1835020, 3, 0, 1835021, 3, 0, 1835022, 3, 0, 1835023, 3, 0, 1835024, 3, 0, 1835025, 3, 0, 1835026, 3, 0, 1835027, 3, 0, 1835028, 3, 0, 1835029, 3, 0, 1835030, 3, 0, 1835031, 3, 0, 1835032, 3, 0, 1835033, 3, 0, 1835034, 3, 0, 1835035, 3, 0, 1835036, 3, 0, 1835037, 3, 0, 1835038, 3, 0, 1835039, 3, 0, 1900544, 1, 0, 1900545, 1, 0, 1900546, 1, 0, 1900547, 1, 0, 1900548, 1, 0, 1900549, 1, 0, 1900550, 1, 0, 1900551, 1, 0, 1900552, 1, 0, 1900553, 1, 0, 1900554, 1, 0, 1900555, 1, 0, 1900556, 1, 0, 1900557, 1, 0, 1900558, 1, 0, 1900559, 1, 0, 1900560, 1, 0, 1900561, 1, 0, 1900562, 1, 0, 1900563, 1, 0, 1900564, 1, 0, 1900565, 1, 0, 1900566, 1, 0, 1900567, 1, 0, 1900568, 1, 0, 1900569, 1, 0, 1900570, 1, 0, 1900571, 1, 0, 1900572, 1, 0, 1900573, 1, 0, 1900574, 1, 0, 1900575, 1, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 12.135, 234.547 )
@@ -286,7 +287,7 @@ position = Vector2( 156.588, 207.959 )
 scale = Vector2( 1, 1 )
 
 [node name="Pill2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 113.484, 140.964 )
+position = Vector2( 60.2534, 174.416 )
 scale = Vector2( 1, 1 )
 
 [node name="Pill9" parent="." instance=ExtResource( 1 )]
@@ -298,7 +299,7 @@ position = Vector2( 16.8973, 153.892 )
 scale = Vector2( 1, 1 )
 
 [node name="Pill11" parent="." instance=ExtResource( 1 )]
-position = Vector2( 81.3497, 200.465 )
+position = Vector2( 80.0191, 205.383 )
 scale = Vector2( 1, 1 )
 
 [node name="Pill12" parent="." instance=ExtResource( 1 )]
@@ -322,7 +323,15 @@ position = Vector2( 175.234, 126.435 )
 scale = Vector2( 1, 1 )
 
 [node name="Pill7" parent="." instance=ExtResource( 1 )]
-position = Vector2( 182.295, 185.747 )
+position = Vector2( 181.862, 185.531 )
+scale = Vector2( 1, 1 )
+
+[node name="Pill15" parent="." instance=ExtResource( 1 )]
+position = Vector2( 58.475, 206.696 )
+scale = Vector2( 1, 1 )
+
+[node name="Pill85" parent="." instance=ExtResource( 1 )]
+position = Vector2( 62.9445, 135.369 )
 scale = Vector2( 1, 1 )
 
 [node name="Pill51" parent="." instance=ExtResource( 1 )]
@@ -334,23 +343,19 @@ position = Vector2( 197.835, 126.031 )
 scale = Vector2( 1, 1 )
 
 [node name="Pill13" parent="." instance=ExtResource( 1 )]
-position = Vector2( 144.746, 201.589 )
+position = Vector2( 131.984, 190.043 )
 scale = Vector2( 1, 1 )
 
 [node name="Pill14" parent="." instance=ExtResource( 1 )]
-position = Vector2( 126.786, 153.764 )
-scale = Vector2( 1, 1 )
-
-[node name="Pill15" parent="." instance=ExtResource( 1 )]
-position = Vector2( 60.597, 177.172 )
+position = Vector2( 126.786, 158.94 )
 scale = Vector2( 1, 1 )
 
 [node name="Pill16" parent="." instance=ExtResource( 1 )]
-position = Vector2( 86.025, 158.979 )
+position = Vector2( 85.5629, 160.088 )
 scale = Vector2( 1, 1 )
 
 [node name="Pill17" parent="." instance=ExtResource( 1 )]
-position = Vector2( 129.035, 218.535 )
+position = Vector2( 130.335, 220.355 )
 scale = Vector2( 1, 1 )
 
 [node name="Pill18" parent="." instance=ExtResource( 1 )]
@@ -378,15 +383,19 @@ position = Vector2( 225.396, 177.154 )
 scale = Vector2( 1, 1 )
 
 [node name="Pill24" parent="." instance=ExtResource( 1 )]
-position = Vector2( 98.8385, 229.905 )
+position = Vector2( 94.2802, 230.999 )
 scale = Vector2( 1, 1 )
 
 [node name="Pill25" parent="." instance=ExtResource( 1 )]
-position = Vector2( 151.197, 189.598 )
+position = Vector2( 151.377, 189.058 )
+scale = Vector2( 1, 1 )
+
+[node name="Pill84" parent="." instance=ExtResource( 1 )]
+position = Vector2( 167.398, 175.558 )
 scale = Vector2( 1, 1 )
 
 [node name="Pill26" parent="." instance=ExtResource( 1 )]
-position = Vector2( 147.038, 149.998 )
+position = Vector2( 145.671, 145.592 )
 scale = Vector2( 1, 1 )
 
 [node name="Pill27" parent="." instance=ExtResource( 1 )]
@@ -410,7 +419,7 @@ position = Vector2( 55.3072, 122.816 )
 scale = Vector2( 1, 1 )
 
 [node name="Pill53" parent="." instance=ExtResource( 1 )]
-position = Vector2( 106.166, 149.685 )
+position = Vector2( 141.875, 162.429 )
 scale = Vector2( 1, 1 )
 
 [node name="Pill58" parent="." instance=ExtResource( 1 )]
@@ -422,11 +431,11 @@ position = Vector2( 125.39, 132.589 )
 scale = Vector2( 1, 1 )
 
 [node name="Pill60" parent="." instance=ExtResource( 1 )]
-position = Vector2( 165.499, 64.6714 )
+position = Vector2( 167.394, 65.619 )
 scale = Vector2( 1, 1 )
 
 [node name="Pill61" parent="." instance=ExtResource( 1 )]
-position = Vector2( 227.691, 54.7326 )
+position = Vector2( 235.903, 65.1561 )
 scale = Vector2( 1, 1 )
 
 [node name="Pill62" parent="." instance=ExtResource( 1 )]
@@ -438,11 +447,11 @@ position = Vector2( 193.043, 70.2573 )
 scale = Vector2( 1, 1 )
 
 [node name="Pill64" parent="." instance=ExtResource( 1 )]
-position = Vector2( 95.8063, 139.384 )
+position = Vector2( 76.5581, 116.021 )
 scale = Vector2( 1, 1 )
 
 [node name="Pill65" parent="." instance=ExtResource( 1 )]
-position = Vector2( 100.948, 120.517 )
+position = Vector2( 104.267, 129.544 )
 scale = Vector2( 1, 1 )
 
 [node name="Pill54" parent="." instance=ExtResource( 1 )]
@@ -450,11 +459,11 @@ position = Vector2( 150.757, 80.0827 )
 scale = Vector2( 1, 1 )
 
 [node name="Pill66" parent="." instance=ExtResource( 1 )]
-position = Vector2( 112.092, 64.6567 )
+position = Vector2( 136.098, 105.719 )
 scale = Vector2( 1, 1 )
 
 [node name="Pill67" parent="." instance=ExtResource( 1 )]
-position = Vector2( 49.3863, 84.2898 )
+position = Vector2( 48.7546, 89.3436 )
 scale = Vector2( 1, 1 )
 
 [node name="Pill68" parent="." instance=ExtResource( 1 )]
@@ -470,7 +479,7 @@ position = Vector2( 159.681, 226.736 )
 scale = Vector2( 1, 1 )
 
 [node name="Pill73" parent="." instance=ExtResource( 1 )]
-position = Vector2( 50.5275, 227.275 )
+position = Vector2( 15.1551, 212.871 )
 scale = Vector2( 1, 1 )
 
 [node name="Pill74" parent="." instance=ExtResource( 1 )]
@@ -510,7 +519,7 @@ position = Vector2( 241.074, 227.275 )
 scale = Vector2( 1, 1 )
 
 [node name="Pill83" parent="." instance=ExtResource( 1 )]
-position = Vector2( 122.488, 70.9563 )
+position = Vector2( 122.488, 71.2837 )
 scale = Vector2( 1, 1 )
 
 [node name="Pill71" parent="." instance=ExtResource( 1 )]
@@ -566,7 +575,7 @@ position = Vector2( 25.0012, 93.8389 )
 scale = Vector2( 1, 1 )
 
 [node name="Pill39" parent="." instance=ExtResource( 1 )]
-position = Vector2( 190.285, 48.9126 )
+position = Vector2( 216.502, 53.0188 )
 scale = Vector2( 1, 1 )
 
 [node name="Pill40" parent="." instance=ExtResource( 1 )]
@@ -586,7 +595,7 @@ position = Vector2( 164.119, 141.83 )
 scale = Vector2( 1, 1 )
 
 [node name="Pill44" parent="." instance=ExtResource( 1 )]
-position = Vector2( 122.803, 204.333 )
+position = Vector2( 113.606, 220.232 )
 scale = Vector2( 1, 1 )
 
 [node name="Pill45" parent="." instance=ExtResource( 1 )]
@@ -602,15 +611,15 @@ position = Vector2( 36.8732, 207.15 )
 scale = Vector2( 1, 1 )
 
 [node name="Pill48" parent="." instance=ExtResource( 1 )]
-position = Vector2( 184.037, 203.597 )
+position = Vector2( 183.722, 203.597 )
 scale = Vector2( 1, 1 )
 
 [node name="Pill49" parent="." instance=ExtResource( 1 )]
-position = Vector2( 220.755, 162.002 )
+position = Vector2( 202.85, 173.45 )
 scale = Vector2( 1, 1 )
 
 [node name="Pill50" parent="." instance=ExtResource( 1 )]
-position = Vector2( 84.6119, 181.768 )
+position = Vector2( 79.3917, 185.189 )
 scale = Vector2( 1, 1 )
 
 [node name="HealthBar" parent="." instance=ExtResource( 4 )]
@@ -628,31 +637,36 @@ position = Vector2( 261.01, 132.691 )
 shape = SubResource( 10 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_left = 50.0
-margin_top = 6.0
-margin_right = 106.0
-margin_bottom = 33.0
+margin_left = 49.0524
+margin_top = 14.5284
+margin_right = 105.052
+margin_bottom = 41.5284
 texture = ExtResource( 3 )
+expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TextureRect2" type="TextureRect" parent="."]
-margin_left = 116.0
-margin_top = 7.0
-margin_right = 172.0
-margin_bottom = 34.0
+margin_left = 115.052
+margin_top = 15.5284
+margin_right = 171.052
+margin_bottom = 42.5284
 texture = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TextureRect3" type="TextureRect" parent="."]
-margin_left = 183.0
-margin_top = 6.0
-margin_right = 242.0
-margin_bottom = 33.0
+margin_left = 182.052
+margin_top = 14.5284
+margin_right = 241.052
+margin_bottom = 41.5284
 texture = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Door" parent="." instance=ExtResource( 7 )]
+position = Vector2( 203.169, 144.267 )
+level_scene = "res://Level.tscn"
