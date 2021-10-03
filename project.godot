@@ -16,6 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="pills"
+run/main_scene="res://Level.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -23,6 +24,7 @@ config/icon="res://icon.png"
 PillShader="*res://Scripts/PillShader.gd"
 PlayerStats="*res://Scripts/PlayerStats.gd"
 EndMenu="*res://EndMenu.tscn"
+Menu="*res://Menu.tscn"
 
 [display]
 

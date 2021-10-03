@@ -1,14 +1,18 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Images/deadscreen.png" type="Texture" id=1]
 [ext_resource path="res://Images/pillsbigger.png" type="Texture" id=2]
 [ext_resource path="res://Images/playagain_btn.png" type="Texture" id=3]
+[ext_resource path="res://Images/playagain_btn2.png" type="Texture" id=4]
+[ext_resource path="res://Images/pillsbigger1.png" type="Texture" id=5]
+[ext_resource path="res://Scripts/EndMenu.gd" type="Script" id=6]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
 [node name="EndMenu" type="Node2D"]
 visible = false
 z_index = 2
+script = ExtResource( 6 )
 
 [node name="Panel" type="Panel" parent="."]
 margin_right = 245.0
@@ -34,27 +38,32 @@ anchor_left = 0.472
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -79.5171
-margin_top = 40.576
-margin_right = -8.37705
-margin_bottom = 79.576
+margin_left = -71.64
+margin_top = 38.0
+margin_right = -23.5
+margin_bottom = 88.0
 texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 4 )
 expand = true
 stretch_mode = 4
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect" type="TextureRect" parent="Panel"]
+[node name="TextureRect" type="TextureButton" parent="Panel"]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -60.5
-margin_top = 27.0
+margin_top = 27.4561
 margin_right = 66.5
-margin_bottom = 118.0
-texture = ExtResource( 2 )
+margin_bottom = 118.456
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 5 )
 expand = true
 stretch_mode = 5
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="pressed" from="Panel/Play" to="." method="_on_Play_pressed"]
