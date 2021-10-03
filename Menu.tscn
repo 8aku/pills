@@ -1,0 +1,78 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Images/menu1.png" type="Texture" id=1]
+[ext_resource path="res://Images/info_btn.png" type="Texture" id=2]
+[ext_resource path="res://Images/play_btn.png" type="Texture" id=3]
+[ext_resource path="res://Images/pills.png" type="Texture" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[node name="Menu" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+margin_right = 245.0
+margin_bottom = 256.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Panel"]
+
+[node name="TextureRect" type="TextureRect" parent="Panel/ParallaxBackground"]
+margin_left = 0.488403
+margin_top = 0.329391
+margin_right = 256.488
+margin_bottom = 256.329
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play" type="TextureButton" parent="Panel"]
+anchor_left = 0.501994
+anchor_top = 0.5
+anchor_right = 0.501994
+anchor_bottom = 0.5
+margin_left = -35.2454
+margin_top = 6.76624
+margin_right = 41.7546
+margin_bottom = 29.7662
+texture_normal = ExtResource( 3 )
+expand = true
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Info" type="TextureButton" parent="Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -19.0579
+margin_top = 44.5347
+margin_right = 20.9421
+margin_bottom = 58.5347
+texture_normal = ExtResource( 2 )
+expand = true
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -39.5
+margin_top = 50.0
+margin_right = 51.5
+margin_bottom = 94.0
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}

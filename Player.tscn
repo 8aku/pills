@@ -9,13 +9,8 @@
 [ext_resource path="res://Images/Player/player_jump1.png" type="Texture" id=7]
 [ext_resource path="res://Images/Player/player_jump2.png" type="Texture" id=8]
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 7 ), ExtResource( 8 ) ],
-"loop": false,
-"name": "jump",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 1 ) ],
 "loop": true,
 "name": "default",
@@ -26,27 +21,33 @@ animations = [ {
 "name": "dead",
 "speed": 4.0
 }, {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ) ],
+"loop": false,
+"name": "jump",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 6 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "walk",
 "speed": 5.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=1]
+[sub_resource type="CapsuleShape2D" id=2]
 radius = 4.20848
 height = 0.285937
 
 [node name="Player" type="KinematicBody2D"]
+scale = Vector2( 1.5, 1.5 )
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( -0.537136, 0.462864 )
 scale = Vector2( 0.5, 0.5 )
-frames = SubResource( 2 )
+frames = SubResource( 1 )
 animation = "jump"
 frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.404297, -0.831745 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )

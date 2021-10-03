@@ -28,10 +28,10 @@ points = PoolVector2Array( 0, 0, 8, 0, 4.61874, 3.46707, 0, 8 )
 [sub_resource type="ConvexPolygonShape2D" id=7]
 points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 
-[sub_resource type="ConvexPolygonShape2D" id=9]
+[sub_resource type="ConvexPolygonShape2D" id=8]
 points = PoolVector2Array( 0, 0, 8, 0, 5.21951, 4, 0, 4 )
 
-[sub_resource type="TileSet" id=8]
+[sub_resource type="TileSet" id=9]
 0/name = "tilemap1.png 0"
 0/texture = ExtResource( 5 )
 0/tex_offset = Vector2( 0, 0 )
@@ -216,14 +216,14 @@ points = PoolVector2Array( 0, 0, 8, 0, 5.21951, 4, 0, 4 )
 9/navigation_offset = Vector2( 0, 0 )
 9/shape_offset = Vector2( 0, 0 )
 9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-9/shape = SubResource( 9 )
+9/shape = SubResource( 8 )
 9/shape_one_way = false
 9/shape_one_way_margin = 1.0
 9/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 9 ),
+"shape": SubResource( 8 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 9/z_index = 0
@@ -259,7 +259,7 @@ __meta__ = {
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2( 0, 16 )
-tile_set = SubResource( 8 )
+tile_set = SubResource( 9 )
 cell_size = Vector2( 8, 8 )
 format = 1
 tile_data = PoolIntArray( 983060, 5, 0, 983061, 5, 0, 983062, 5, 0, 983063, 5, 0, 983064, 5, 0, 983065, 5, 0, 983066, 5, 0, 983067, 5, 0, 983068, 5, 0, 983069, 5, 0, 983070, 5, 0, 983071, 5, 0, 1114124, 5, 0, 1114125, 5, 0, 1114126, 5, 0, 1114127, 5, 0, 1114128, 5, 0, 1114129, 5, 0, 1310723, 5, 0, 1310724, 5, 0, 1310725, 5, 0, 1310726, 5, 0, 1310727, 5, 0, 1310728, 5, 0, 1310729, 5, 0, 1310730, 5, 0, 1507341, 5, 0, 1507342, 5, 0, 1507343, 5, 0, 1507344, 5, 0, 1507345, 5, 0, 1638407, 5, 0, 1638408, 5, 0, 1638409, 5, 0, 1638410, 5, 0, 1638411, 5, 0, 1835008, 3, 0, 1835009, 3, 0, 1835010, 3, 0, 1835011, 3, 0, 1835012, 3, 0, 1835013, 3, 0, 1835014, 3, 0, 1835015, 3, 0, 1835016, 3, 0, 1835017, 3, 0, 1835018, 3, 0, 1835019, 3, 0, 1835020, 3, 0, 1835021, 3, 0, 1835022, 3, 0, 1835023, 3, 0, 1835024, 3, 0, 1835025, 3, 0, 1835026, 3, 0, 1835027, 3, 0, 1835028, 3, 0, 1835029, 3, 0, 1835030, 3, 0, 1835031, 3, 0, 1835032, 3, 0, 1835033, 3, 0, 1835034, 3, 0, 1835035, 3, 0, 1835036, 3, 0, 1835037, 3, 0, 1835038, 3, 0, 1835039, 3, 0, 1900544, 1, 0, 1900545, 1, 0, 1900546, 1, 0, 1900547, 1, 0, 1900548, 1, 0, 1900549, 1, 0, 1900550, 1, 0, 1900551, 1, 0, 1900552, 1, 0, 1900553, 1, 0, 1900554, 1, 0, 1900555, 1, 0, 1900556, 1, 0, 1900557, 1, 0, 1900558, 1, 0, 1900559, 1, 0, 1900560, 1, 0, 1900561, 1, 0, 1900562, 1, 0, 1900563, 1, 0, 1900564, 1, 0, 1900565, 1, 0, 1900566, 1, 0, 1900567, 1, 0, 1900568, 1, 0, 1900569, 1, 0, 1900570, 1, 0, 1900571, 1, 0, 1900572, 1, 0, 1900573, 1, 0, 1900574, 1, 0, 1900575, 1, 0 )
@@ -269,24 +269,8 @@ position = Vector2( 41.5121, 232.93 )
 z_index = 1
 
 [node name="Pill" parent="." instance=ExtResource( 4 )]
-position = Vector2( 39.5083, 72.1949 )
-scale = Vector2( 0.5, 0.5 )
-
-[node name="Pill2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 129.278, 137.995 )
-scale = Vector2( 0.5, 0.5 )
-
-[node name="Pill4" parent="." instance=ExtResource( 4 )]
-position = Vector2( 193.214, 127.532 )
-scale = Vector2( 0.5, 0.5 )
-
-[node name="Pill5" parent="." instance=ExtResource( 4 )]
-position = Vector2( 114.351, 136.324 )
-scale = Vector2( 0.5, 0.5 )
-
-[node name="Pill3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 67.5748, 87.5393 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 129.628, 182.736 )
+scale = Vector2( 1, 1 )
 
 [node name="HealthBar" parent="." instance=ExtResource( 1 )]
 position = Vector2( 8, 16 )
@@ -294,3 +278,4 @@ scale = Vector2( 1.5, 1.5 )
 
 [node name="Door" parent="HealthBar" instance=ExtResource( 2 )]
 position = Vector2( 146.995, 71.8092 )
+level_scene = "res://Level.tscn"

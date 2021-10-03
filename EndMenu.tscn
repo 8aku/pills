@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Images/deadscreen.png" type="Texture" id=1]
+[ext_resource path="res://Images/pillsbigger.png" type="Texture" id=2]
+[ext_resource path="res://Images/playagain_btn.png" type="Texture" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[node name="EndMenu" type="Node2D"]
+visible = false
+z_index = 2
+
+[node name="Panel" type="Panel" parent="."]
+margin_right = 245.0
+margin_bottom = 256.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="Panel"]
+margin_top = 0.817825
+margin_right = 256.0
+margin_bottom = 256.818
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play" type="TextureButton" parent="Panel"]
+anchor_left = 0.472
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -79.5171
+margin_top = 40.576
+margin_right = -8.37705
+margin_bottom = 79.576
+texture_normal = ExtResource( 3 )
+expand = true
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -60.5
+margin_top = 27.0
+margin_right = 66.5
+margin_bottom = 118.0
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}

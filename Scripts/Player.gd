@@ -23,6 +23,7 @@ var target
 var dead = false
 
 onready var player_stats = get_node("/root/PlayerStats")
+onready var end_menu = get_node("/root/EndMenu")
 
 func _ready():
 	$AnimatedSprite.play("default")
@@ -127,6 +128,8 @@ func _process(delta):
 func die():
 	print('player is dead!')
 	dead = true
+	#three second timer
+	end_menu.show()
 	#3 second timer death menu/music fade in
 	
 #func hit(damage):

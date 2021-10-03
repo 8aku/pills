@@ -266,27 +266,28 @@ tile_data = PoolIntArray( 524289, 6, 0, 524290, 5, 0, 524291, 6, 0, 524292, 5, 0
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 24, 72 )
+scale = Vector2( 1, 1 )
 z_index = 1
 
 [node name="Pill" parent="." instance=ExtResource( 4 )]
 position = Vector2( 75.295, 78.5321 )
-scale = Vector2( 0.5, 0.5 )
+scale = Vector2( 1, 1 )
 
 [node name="Pill2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 82.8882, 87.7032 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 40.4488, 66.4699 )
+scale = Vector2( 1, 1 )
 
 [node name="Pill4" parent="." instance=ExtResource( 4 )]
-position = Vector2( 97.8029, 87.3754 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 107.796, 115.389 )
+scale = Vector2( 1, 1 )
 
 [node name="Pill5" parent="." instance=ExtResource( 4 )]
-position = Vector2( 88.0829, 77.0521 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 81.3261, 114.719 )
+scale = Vector2( 1, 1 )
 
 [node name="Pill3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 67.5748, 87.5393 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 102.435, 79.5373 )
+scale = Vector2( 1, 1 )
 
 [node name="HealthBar" parent="." instance=ExtResource( 5 )]
 position = Vector2( 8, 16 )
