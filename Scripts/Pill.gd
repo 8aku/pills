@@ -10,12 +10,9 @@ var _fade_out_time = 2
 
 func eat_pill():
 	print('ate a pill!')
-	if (player_stats.health == 0):
-		micro_shader.micro_effect(shader_script, 20, _fade_in_time, _fade_out_time)
-		player.die()
-	else:
-		micro_shader.micro_effect(shader_script, _time_length, _fade_in_time, _fade_out_time)
-		player_stats.health -= 2
+	player_stats.health -=2
+	micro_shader.micro_effect(shader_script, _time_length, _fade_in_time, _fade_out_time)
+	print(player_stats.health)
 
 func _on_Area2D_body_entered(body):
 	if (body.get_name() == 'Player'):

@@ -97,6 +97,9 @@ func _process_environment(delta):
 		fall_timer += delta
 	if is_on_ceiling() and velocity.y < 0:
 		velocity.y = 0
+		
+	if (player_stats.health == 0):
+		die()
 	
 	
 func _process_movement(delta):
@@ -123,8 +126,8 @@ func _process(delta):
 	
 func die():
 	print('player is dead!')
-	print(player_stats.health)
 	dead = true
+	#3 second timer death menu/music fade in
 	
 #func hit(damage):
 #	$AnimatedSprite.play("hit")
